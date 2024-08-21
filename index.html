@@ -125,13 +125,16 @@
         }
 
         footer {
-            margin-top: 50px;
+            margin-top: auto; /* Pushes footer to the bottom of the viewport */
             background-color: #000;
             color: #F0EAD6;
-            padding: 10px 0;
+            padding: 10px 20px;
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
+            white-space: nowrap; /* Prevent text wrapping */
+            text-align: center; /* Ensure text is centered */
         }
 
         @media (max-width: 900px) {
@@ -157,6 +160,9 @@
             }
             .team-member img {
                 width: 100px; /* Reduce image size for small screens */
+            }
+            footer p {
+                font-size: 0.9em; /* Adjust font size for smaller screens */
             }
         }
     </style>

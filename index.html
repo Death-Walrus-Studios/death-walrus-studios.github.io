@@ -17,45 +17,126 @@
     <style>
         body {
             font-family: 'Nunito', sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
             background-color: #262523;
             color: #F0EAD6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
+
         header {
             background-color: #262523;
             padding: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
         }
+
         header img {
             width: 150px;
         }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
         h1 {
             font-family: 'East Sea Dokdo', cursive;
             color: #F0EAD6;
             font-size: 3em;
             margin: 20px 0;
+            letter-spacing: 2px;
         }
+
         p {
             font-family: 'Nunito', sans-serif;
             font-size: 1.2em;
             margin: 15px 20px;
             color: #F0EAD6;
+            line-height: 1.6;
         }
+
+        .team-section {
+            margin-top: 40px;
+        }
+
+        .team-section h2 {
+            font-family: 'East Sea Dokdo', cursive;
+            color: #F0EAD6;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .team-member {
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .team-member img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #0EB1D2;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            color: #F0EAD6;
+        }
+
         a {
             color: #0EB1D2;
             text-decoration: none;
             font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
             color: #34E4EA;
         }
+
         footer {
             margin-top: 50px;
             background-color: #262523;
             color: #F0EAD6;
             padding: 10px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .team-members {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -64,13 +145,40 @@
         <img src="logo.png" alt="Death Walrus Studios Logo">
     </header>
 
-    <h1>Death Walrus Studios</h1>
-    <p>Welcome Death Walrus Studios! We're a small but mighty indie game dev team that loves creating games.</p>
-    <p>We're just getting started on our journey, so stick around! Follow us on our quest to bring unique and engaging games to life. Check out our <a href="https://github.com/deathwalrusstudios">GitHub</a> for sneak peeks, updates, and behind-the-scenes madness.</p>
+    <main>
+        <h1>DEATH WALRUS STUDIOS</h1>
+        <p>Welcome to Death Walrus Studios! We're a small but mighty indie game dev team that loves creating fun, quirky, and engaging games.</p>
+        <p>We're just getting started on our journey, so stick around! Follow us on our quest to bring unique and exciting games to life. Check out our <a href="https://github.com/deathwalrusstudios">GitHub</a> for sneak peeks, updates, and behind-the-scenes madness.</p>
+        
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="logo.png" alt="Alex Lutz">
+                    <h3>Alex Lutz</h3>
+                    <p>Lead Programmer & Studio Director</p>
+                </div>
+                <div class="team-member">
+                    <img src="logo.png" alt="Cohen Derry">
+                    <h3>Cohen Derry</h3>
+                    <p>Lead Artist</p>
+                </div>
+                <div class="team-member">
+                    <img src="logo.png" alt="Kipton Derry">
+                    <h3>Kipton Derry</h3>
+                    <p>Game Designer & Marketing</p>
+                </div>
+                <div class="team-member">
+                    <img src="logo.png" alt="Tynan Portillo">
+                    <h3>Tynan Portillo</h3>
+                    <p>Lead Composer</p>
+                </div>
+            </div>
+        </section>
+    </main>
     
     <footer>
-        <p>Made with 💙 by the Death Walrus crew. Stay quirky!</p>
+        <p>Made with 💙 by the Death Walrus crew</p>
     </footer>
 </body>
 </html>
-

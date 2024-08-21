@@ -19,7 +19,7 @@
             font-family: 'Nunito', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #262523;
+            background-color: #000;
             color: #F0EAD6;
             display: flex;
             flex-direction: column;
@@ -30,7 +30,7 @@
         }
 
         header {
-            background-color: #262523;
+            background-color: #000;
             padding: 20px;
             width: 100%;
             display: flex;
@@ -45,7 +45,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 800px;
+            max-width: 1000px; /* Increased width for the main container */
             padding: 20px;
             text-align: center;
             overflow-x: hidden; /* Prevent horizontal scroll */
@@ -81,31 +81,36 @@
         .team-members {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between; /* Space between team members */
             gap: 30px;
+            width: 100%; /* Ensure the team members take up full width */
         }
 
         .team-member {
             text-align: center;
-            max-width: 200px;
+            flex: 1 1 calc(25% - 30px); /* Ensure four team members fit in one row */
+            max-width: calc(25% - 30px); /* Allow the width to adjust for desktop */
+            box-sizing: border-box; /* Include padding in width calculation */
         }
 
         .team-member img {
-            width: 100px;
+            width: 120px; /* Larger profile images */
             border-radius: 50%;
             margin-bottom: 10px;
         }
 
         .team-member h3 {
             font-family: 'Nunito', sans-serif;
-            font-size: 1.1em;
-            margin-bottom: 5px;
+            font-size: 1.3em; /* Slightly larger name font */
+            margin-bottom: 10px;
             color: #0EB1D2;
         }
 
         .team-member p {
-            font-size: 1em;
+            font-size: 1.1em; /* Larger bio text */
             color: #F0EAD6;
+            line-height: 1.4;
+            padding: 0 10px; /* Add some padding for readability */
         }
 
         a {
@@ -121,12 +126,19 @@
 
         footer {
             margin-top: 50px;
-            background-color: #262523;
+            background-color: #000;
             color: #F0EAD6;
             padding: 10px 0;
             width: 100%;
             display: flex;
             justify-content: center;
+        }
+
+        @media (max-width: 900px) {
+            .team-member {
+                flex: 1 1 calc(50% - 30px); /* Stack two members per row on medium screens */
+                max-width: calc(50% - 30px);
+            }
         }
 
         @media (max-width: 600px) {
@@ -138,6 +150,13 @@
             }
             .team-members {
                 flex-direction: column;
+            }
+            .team-member {
+                flex: 1 1 100%; /* Stack team members vertically on small screens */
+                max-width: 100%;
+            }
+            .team-member img {
+                width: 100px; /* Reduce image size for small screens */
             }
         }
     </style>
